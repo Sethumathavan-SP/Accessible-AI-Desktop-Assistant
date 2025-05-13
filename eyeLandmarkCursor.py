@@ -1,6 +1,14 @@
 import cv2
 import dlib
 import pyautogui
+import os
+import urllib.request
+
+url = "https://drive.google.com/uc?id=1-LxuCo9e_nJfmq0Kpf-0ktgOgicGiYN7"
+file_name = "shape_predictor_68_face_landmarks.dat"
+
+if not os.path.isfile(file_name):
+    urllib.request.urlretrieve(url, file_name)
 
 Eye_x = -1
 Eye_y = -1
